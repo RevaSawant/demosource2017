@@ -1,0 +1,14 @@
+<apex:page showHeader="false" sidebar="false">
+  
+    
+   
+        <apex:tabPanel >
+           <apex:tab name="Merchandise__c" label="Merchandise" id="merchandisepanel">
+           <apex:include pageName="MerchandiseTabPage"/>
+           </apex:tab>
+           <apex:tab name="Invoice__c" label="Invoices">
+           <apex:include pageName="InvoiceTabPage"/>
+           </apex:tab>
+        </apex:tabPanel>
+   
+</apex:page>

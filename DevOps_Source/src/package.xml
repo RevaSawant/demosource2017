@@ -4,12 +4,19 @@
         <members>myreports</members>
         <members>myreports/AccountReports</members>
         <members>myreports/contactreport</members>
-		<name>Report</name>
+        <name>Report</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomObject</name>
     </types>
     <version>38.0</version>
 </Package>
-
-
-
-
-<!--  test for demo -->

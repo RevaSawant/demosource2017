@@ -1,0 +1,31 @@
+<apex:page Controller="MerchandiseController" showHeader="false" sidebar="false">
+
+<apex:form >
+  <apex:pageBlock >
+   <apex:commandbutton value="Back" action="{!BackToHome}" rendered="{!NOT(clickSearch)}"/>&nbsp;&nbsp;&nbsp;
+   <apex:inputText value="{!searchValue}"/>&nbsp;&nbsp;&nbsp;
+    <apex:commandbutton value="Search" action="{!searchMerchandise}"/><br/><br/>
+        <apex:pageBlockTable value="{!ListOfMerchdise}" var="merchandise" rendered="{!clickSearch}">
+            <apex:column value="{!merchandise.Name}"/>  
+            <apex:column value="{!merchandise.Price__c}"/> 
+            <apex:column value="{!merchandise.Quantity__c }"/>         
+        </apex:pageBlockTable>
+        <apex:outputpanel rendered="{!NOT(clickSearch)}"> 
+        <h1>Search Results </h1>
+        <apex:pageBlockTable value="{!searchMerchandiseList}" var="searchList" >
+        
+            <apex:column >
+            <apex:outputLink value="{!URLFOR($Action.Merchandise__c.View , searchList.Id)}">{!searchList.Name}
+            </apex:outputlink> 
+            </apex:column> 
+            <apex:column value="{!searchList.Price__c}"/> 
+            <apex:column value="{!searchList.Quantity__c }"/>         
+        </apex:pageBlockTable>
+        </apex:outputpanel>
+        <apex:outputpanel rendered="{!AND(NOT(clickSearch),searchMerchandiseList.empty)}">
+        <h2> No Merchandise Found. Please add the Merchandise </h2><br/><br/>
+        <apex:commandbutton value="Add Merchandise" action="{!URLFOR($Action.Merchandise__c.New)}" />
+        </apex:outputpanel>
+    </apex:pageBlock>  
+    </apex:form>
+</apex:page><!--  Test for build pipeline : reva for demo -->
