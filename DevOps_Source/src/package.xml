@@ -4,8 +4,7 @@
         <members>myreports</members>
         <members>myreports/AccountReports</members>
         <members>myreports/contactreport</members>
-        <members>unfiled$public</members>
-        <name>Report</name>
+		<name>Report</name>
     </types>
     <version>38.0</version>
 </Package>
