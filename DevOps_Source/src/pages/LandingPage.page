@@ -1,7 +1,9 @@
-<apex:page showHeader="false" sidebar="false">
+<apex:page showHeader="false" sidebar="false" controller="myController">
   
-    
-   
+<!-- Check for demo : REva -->
+
+ Today  :: {!currentTime} <br/> 
+     
         <apex:tabPanel >
            <apex:tab name="Merchandise__c" label="Merchandise" id="merchandisepanel">
            <apex:include pageName="MerchandiseTabPage"/>
