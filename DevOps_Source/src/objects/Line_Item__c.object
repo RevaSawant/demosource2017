@@ -110,6 +110,11 @@
         <type>Currency</type>
     </fields>
     <label>Line Item</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <label>Line Item Number</label>
         <type>Text</type>
